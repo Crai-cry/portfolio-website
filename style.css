@@ -1,0 +1,216 @@
+:root {
+    --primary-color: #ff740f;
+    --background-color: #111318;
+    --text-color: #f0f0f0;
+}
+
+header {
+    height: 20%;
+    line-height: normal;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+ul {
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 0;
+    list-style-type: none; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+li {
+    margin-top: 4%;
+    height: 50px;
+    width: 90px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    font-weight: 700;
+    font-size: medium;
+    padding: 10px;
+    transition: all 0.3s ease; 
+    border: 2px solid transparent;
+}
+
+li:hover {
+    background-color: var(--text-color);
+    border: 2px solid var(--primary-color); 
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease; 
+}
+li:hover a {
+    color: var(--primary-color); 
+}
+
+p {
+    vertical-align: middle;
+    text-align: center;
+    color: var(--background-color);
+    height: 250px; 
+    width: 80%; 
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    
+    border: 4px solid var(--primary-color);
+    border-radius: 60px;
+    box-sizing: border-box;
+    font-size: 24px; 
+    padding: 20px; 
+}
+
+section {
+    column-count: 2;
+}
+
+img {
+    border: 4px solid var(--primary-color);
+    border-radius: 15px;
+    height: 50%;
+    width: 40%;
+    margin-left: 25%;
+    
+    box-sizing: border-box;
+    display: flex;
+    max-width: 90%;
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url('gray-background-with-orange-blue-color-waves_545537-18.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 50px 0 20px 0; 
+}
+
+table {
+    width: 60%; 
+    border-collapse: collapse;
+    margin: 20px auto; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+}
+
+table thead {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+table thead th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tbody tr {
+    border-bottom: 1px solid rgba(255, 116, 15, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tbody tr:hover {
+    background-color: rgba(255, 116, 15, 0.1);
+}
+
+table tbody td {
+    color: var(--text-color);
+}
+
+
+table tbody td a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+table tbody td a:hover {
+    color: #e65c00;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Расстояние между фотографиями */
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.photo {
+    width: 200px; /* Ширина фотографии */
+    height: 200px; /* Высота фотографии */
+    
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняет пропорции изображения */
+}
+
+@media (max-width: 800px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    p {
+        height: auto; 
+        width: 90%; 
+        font-size: 18px; 
+    }
+
+    table {
+        font-size: 14px; 
+    }
+    body{
+        background-repeat: repeat;
+    }
+}
