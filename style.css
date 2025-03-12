@@ -5,14 +5,13 @@
 }
 
 header {
-    height: 20%;
-    line-height: normal;
+    height: auto; /* Высота автоматическая для мобильных устройств */
+    padding: 10px 5%; /* Уменьшенные отступы для мобильных */
+    box-sizing: border-box;
     position: relative;
     width: 100%;
-    box-sizing: border-box;
-    padding: 10px 0;
+    text-align: center; /* Центрирование содержимого */
 }
-
 ul {
     margin-left: 7%;
     margin-right: 7%;
@@ -60,22 +59,17 @@ li:hover a {
 }
 
 p {
-    vertical-align: middle;
-    text-align: center;
-    color: var(--background-color);
-    height: 250px; 
-    width: 80%; 
-    max-width: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; 
-    
+    width: 90%; /* Ширина на всю доступную ширину */
+    max-width: 100%;
+    height: auto; /* Автоматическая высота */
+    padding: 20px;
+    margin: 20px auto;
     border: 4px solid var(--primary-color);
     border-radius: 60px;
     box-sizing: border-box;
-    font-size: 24px; 
-    padding: 20px; 
+    font-size: 18px; /* Уменьшенный размер шрифта */
+    text-align: center;
+    color: var(--background-color);
 }
 
 section {
@@ -190,27 +184,29 @@ table tbody td a:hover {
     object-fit: cover; /* Сохраняет пропорции изображения */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+    header {
+        padding: 10px 2%; /* Еще меньше отступов */
+    }
+
     ul {
-        flex-direction: column;
-        align-items: center;
+        gap: 5px; /* Минимальное расстояние между элементами */
     }
 
     li {
-        margin-top: 10px;
-        width: 100%;
+        width: 100%; /* Полная ширина */
+        font-size: 14px; /* Еще меньше размер шрифта */
     }
 
     p {
-        height: auto; 
-        width: 90%; 
-        font-size: 18px; 
+        font-size: 16px; /* Уменьшенный размер шрифта */
+        padding: 15px;
     }
 
     table {
-        font-size: 14px; 
+        font-size: 12px; /* Еще меньше размер шрифта */
     }
-    body{
-        background-repeat: repeat;
+
+    .photo {
+        max-width: 150px; /* Уменьшенный размер фотографий */
     }
-}
