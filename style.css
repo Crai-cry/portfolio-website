@@ -93,8 +93,10 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url('gray-background-with-orange-blue-color-waves_545537-18.avif');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat; /* Повторение фонового изображения */
+    background-size: cover; /* Масштабирование изображения */
+    background-position: center; /* Центрирование изображения */
+    background-attachment: fixed; 
 }
 
 h1 {
@@ -192,7 +194,11 @@ table tbody td a:hover {
     ul {
         gap: 5px; /* Минимальное расстояние между элементами */
     }
-
+    body {
+        background-size: auto; /* Отключаем масштабирование для мобильных */
+        background-repeat: repeat; /* Повторяем изображение */
+        background-attachment: scroll; /* Отключаем фиксацию фона */
+    }
     li {
         width: 100%; /* Полная ширина */
         font-size: 14px; /* Еще меньше размер шрифта */
