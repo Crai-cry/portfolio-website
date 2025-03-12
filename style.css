@@ -5,12 +5,12 @@
 }
 
 header {
-    height: auto; /* Высота автоматическая для мобильных устройств */
-    padding: 10px 5%; /* Уменьшенные отступы для мобильных */
+    height: auto; 
+    padding: 10px 5%; 
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    text-align: center; /* Центрирование содержимого */
+    text-align: center; 
 }
 ul {
     margin-left: 7%;
@@ -59,17 +59,18 @@ li:hover a {
 }
 
 p {
-    width: 90%; /* Ширина на всю доступную ширину */
+    width: 90%; 
     max-width: 100%;
-    height: auto; /* Автоматическая высота */
+    height: auto; 
     padding: 20px;
     margin: 20px auto;
     border: 4px solid var(--primary-color);
     border-radius: 60px;
     box-sizing: border-box;
-    font-size: 18px; /* Уменьшенный размер шрифта */
+    font-size: 18px; 
     text-align: center;
     color: var(--background-color);
+    background-color: var(--text-color);
 }
 
 section {
@@ -93,9 +94,9 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url('gray-background-with-orange-blue-color-waves_545537-18.avif');
-    background-repeat: repeat; /* Повторение фонового изображения */
-    background-size: cover; /* Масштабирование изображения */
-    background-position: center; /* Центрирование изображения */
+    background-repeat: repeat; 
+    background-size: cover; 
+    background-position: center; 
     background-attachment: fixed; 
 }
 
@@ -157,62 +158,63 @@ table tbody td a {
 }
 
 table tbody td a:hover {
-    color: #e65c00;
+    color: var(--primary-color);
 }
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Расстояние между фотографиями */
+    gap: 15px; 
     justify-content: center;
     margin: 20px 0;
 }
 
 .photo {
-    width: 200px; /* Ширина фотографии */
-    height: 200px; /* Высота фотографии */
+    width: 200px; 
+    height: 200px; 
     
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
+    transform: scale(1.05); 
 }
 
 .photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Сохраняет пропорции изображения */
+    object-fit: cover; 
 }
 
 @media (max-width: 600px) {
     header {
-        padding: 10px 2%; /* Еще меньше отступов */
+        padding: 10px 2%; 
     }
 
     ul {
-        gap: 5px; /* Минимальное расстояние между элементами */
+        gap: 5px; 
     }
     body {
-        background-size: auto; /* Отключаем масштабирование для мобильных */
-        background-repeat: repeat; /* Повторяем изображение */
-        background-attachment: scroll; /* Отключаем фиксацию фона */
+        background-image: none;
+        background-color: var(--text-color); 
     }
     li {
-        width: 100%; /* Полная ширина */
-        font-size: 14px; /* Еще меньше размер шрифта */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     p {
-        font-size: 16px; /* Уменьшенный размер шрифта */
+        white-space: nowrap;
+        font-size: 16px; 
         padding: 15px;
     }
 
     table {
-        font-size: 12px; /* Еще меньше размер шрифта */
+        font-size: 12px; 
     }
 
     .photo {
-        max-width: 150px; /* Уменьшенный размер фотографий */
+        max-width: 150px; 
     }
+}
