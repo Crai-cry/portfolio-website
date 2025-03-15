@@ -93,7 +93,7 @@ img {
 body {
     height: 100vh;
     margin: 0;
-    background-image: url('gray-background-with-orange-blue-color-waves_545537-18.avif');
+    background-image: url('snapedit_1742045016703.png');
     background-repeat: repeat; 
     background-size: cover; 
     background-position: center; 
@@ -196,6 +196,12 @@ table tbody td a:hover {
     }
     ul {
         gap: 5px; 
+    }
+    table tbody tr{
+        background-color: var(--text-color);
+    }
+    table tbody tr:hover {
+        background-color: var(--text-color);
     }
     body {
         background-image: url("foto/il_fullxfull.3121893197_9xxd.webp") ;
